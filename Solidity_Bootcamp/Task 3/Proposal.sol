@@ -22,7 +22,7 @@ contract ProposalContract {
     using Counters for Counters.Counter;
     Counters.Counter private _counter;
 
-    function create(string calldata _title,string calldata _description, uint256 _total_vote_to_end) external {//TASK 3
+    function create(string calldata _title, string calldata _description, uint256 _total_vote_to_end) external {//TASK 3
             _counter.increment();
             proposal_history[_counter.current()] = Proposal(_title, _description, 0, 0, 0, _total_vote_to_end, false, true);//TASK 3
     }
